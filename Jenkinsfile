@@ -29,6 +29,7 @@ pipeline {
         stage('NPM Build') {
             steps {
                 script {
+                    sh 'rm -r /var/jenkins_home/workspace/app-teste/dist'
                     sh 'npm run build'
                 }
             }
