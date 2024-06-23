@@ -21,7 +21,6 @@ pipeline {
         stage('NPM Update') {
             steps {
                 script {
-                    sh 'rm -r /var/jenkins_home/workspace/app-teste/dist/'
                     sh 'npm update'
                 }
             }
@@ -39,7 +38,7 @@ pipeline {
             steps {
                 script {
                     sh 'pm2 delete api-teste || true'
-                    sh 'pm2 start /var/jenkins_home/workspace/app-teste/dist/main.js --name api-teste'
+                    sh 'pm2 start /var/jenkins_home/workspace/app-teste-com-arquivo-jenkins/dist/main.js --name api-teste'
                 }
             }
         }
