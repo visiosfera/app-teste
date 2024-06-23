@@ -21,7 +21,7 @@ pipeline {
         stage('NPM Update') {
             steps {
                 script {
-                    sh 'rm -r /var/jenkins_home/workspace/app-teste/dist'
+                    sh 'rm -r /var/jenkins_home/workspace/app-teste/dist/'
                     sh 'npm update'
                 }
             }
